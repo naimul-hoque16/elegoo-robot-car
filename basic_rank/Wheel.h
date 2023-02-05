@@ -8,13 +8,12 @@ it only allows for controlling two sets of wheels on the same side, not individu
 #ifndef WHEEL_H
 #define WHEEL_H
 
-#include "Arudino.h"
-
 class Wheel {
     public:
         Wheel(int motor_pin, int pwm_pin);
         void set_motor_pin(int motor_pin);
         void set_pwm_pin(int pwm_pin);
+        void set_speed(int speed);
         void rotate_counterclockwise(int speed);
         void rotate_clockwise(int speed);
         void stop();
